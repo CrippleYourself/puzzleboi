@@ -10,9 +10,7 @@ const { App, directMention } = require('@slack/bolt');
 // Initializes your app with your bot token and signing secret
 const app = new App({
     token: process.env.ss,
-    signingSecret: process.env.st,
-    appToken: process.env.sat,
-    socketMode: true
+    signingSecret: process.env.st
 });
 
 app.message(directMention, async ({ message, say, client }) => {
